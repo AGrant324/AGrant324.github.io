@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>bigPlayer</title>
+	<link href="stylesheet.css" rel="stylesheet" type="text/css">
+	<script>
+		function startTime() {
+			var today = new Date();
+			var h = today.getHours();
+			var m = today.getMinutes();
+			var s = today.getSeconds();
+			m = checkTime(m);
+			s = checkTime(s);
+			document.getElementById('clock').innerHTML =
+			h + ":" + m + ":" + s;
+			var t = setTimeout(startTime, 500);
+		}
+		function checkTime(i) {
+			if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+			return i;
+		}
+	</script>
+</head>
+<body onload="startTime()">
+	<div class="left">
+		<div class="thin" style="background-color:red;">
+			<p>
+				1
+			</p>
+		</div>
+		<div class="thin"  style="background-color:blue;">
+			<a class="twitter-grid" data-lang="en" href="https://twitter.com/TwitterDev/timelines/539487832448843776">National Park Tweets</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+	</div>
+	<div class="centre">
+		<div class="wide">
+			<p id="clock"></p>
+		</div>
+		<div id="centre">
+			<iframe id="ytplayer" type="text/html" width="640" height="360"
+		  src="https://www.youtube.com/embed/y60wDzZt8yg?autoplay=1&origin=http://example.com"
+		  frameborder="0"></iframe>
+		</div>	
+		<div id="six" class="wide">
+			<p id="six">
+				6
+			</p>
+		</div>
+	</div>
+	<div class="right">
+		<div class="thin" style="background-color:red;">
+			<p>
+				4
+			</p>
+		</div>
+		<div class="thin"  style="background-color:blue;">
+			
+
+		</div>
+	</div>
+</body>
+</html>
